@@ -1,0 +1,351 @@
+<!-- The <!DOCTYPE html> declaration defines that this document is an HTML5 document -->
+<!DOCTYPE html>
+<!-- The <html> element is the root element of an HTML page -->
+<!-- The lang attribute specifies the language of the element's content. -->
+<html lang="en">
+    <!-- The <head> element contains meta information about the HTML page -->
+    <head>
+        <!-- The <meta> tag defines metadata about an HTML document <meta> tags always go inside the <head> element,
+             and are typically used to specify character set, page description, keywords, author of the document, 
+             and viewport settings. 
+        -->
+        <!-- UTF-8 is a character encoding system. It lets you represent characters as ASCII text, 
+            (while still allowing for international characters, such as Chinese, Bangla etc so many characters) 
+            ASCII (American Standard Code for Information Interchange) is the most common character encoding format 
+            for text data in computers and on the internet 
+        -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab) -->
+        <title>Tailwind</title>
+
+        <!-- ===== A favicon is a small (16px X 16px) image displayed next to the page title in the browser tab ===== -->
+        <!-- <link rel="icon" type="" href=""> -->
+        <link rel="icon" href="./favicon/fav.png">
+
+        <!-- ====== Google font link ====== -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+        <!-- ====== Google icon(s) link ====== -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+
+        <!-- ====== Font Awesome CDN reference link ======  -->
+        <script src="https://kit.fontawesome.com/4aea96c79d.js" crossorigin="anonymous"></script>
+
+
+        <!-- ====== Boxicons website reference link ======  -->
+        
+        
+        <!-- ===== CSS stylesheet reference link =====  -->
+        <!-- (If you use Bootstrap CSS CND link & external custom CSS link then always mentioned 
+            the external custom CSS link after Or under the Bootstrap CSS CND link) -->
+        <link rel="stylesheet" href="styles/style.css">
+        
+
+        <!-- ===== Bootstrap.css stylesheet reference link =====  -->
+        
+        
+        <!-- ===== 
+            ====== External JavaScript ======
+            #1 - JavaScript can be placed in the <head>, or in the <body> section, or in both.
+            #2 - In HTML, JavaScript code is inserted between <script> and </script> tags.
+            #3 - You can place any number of scripts in an HTML document.
+            #4 - To use an external script, put the name of the script file in the src (source) attribute of a <script> tag:
+        ======= -->
+        <!-- ===== Bootstrap js styles reference link will be here Or in the bottom of body tag =====  -->
+        
+
+
+        <!-- ===== Tailwind CSS stylesheet reference CND Script link =====  -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!--  ========================================================================= 
+            This code is a Javascript structure object (theme). Inside the theme object 
+                     another object (extend) > Inside the extend object another object (colors) > 
+                     Inside the colors object all the custom object (color).
+                     & Use for customize configuration with your own color/design
+            ========================================================================== -->
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    clifford: '#da373d',
+                    yellow: '#FECC02',
+                    black: '#131313',
+                    gray: '#4E4E4E',
+                  },
+                  fontFamily : {
+                            // Font_Name , Font_Style
+                    bebas : ["Bebas Neue", "sans-serif"],
+                    montserrat : ["Montserrat", "sans-serif"],
+                  }
+                }
+              }
+            }
+          </script>
+
+
+    </head>
+    <!-- The <body> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc. -->
+    <body class="">
+        <!-- ===== Header Section Start ====== -->
+        <header class="">
+
+            <!-- ====== Navbar Section Start ====== -->
+            <nav class="bg-white h-20 fixed top-0 right-0 left-0">
+                <div class="flex justify-between items-center font-bebas h-20 w-full max-w-7xl mx-auto px-5">
+                    <h3 class="text-3xl">Jhaka Naka Production</h3>
+                    <ul class="text-lg flex gap-5">
+                        <li>About Us</li>
+                        <li>Our Movies</li>
+                        <li>Services</li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- ====== Navbar Section End ====== -->
+
+            <!-- ===== Banner Section Start ====== -->
+            <section class="bg-red-500 h-screen pt-20 bg-[url('./images/banner.jpg')] bg-cover">
+                <div class="h-full w-full max-w-7xl mx-auto flex items-center px-5">
+                    <div class="font-bebas">
+                        <p class="text-xl text-white">Movie production studio</p>
+                        <h1 class="font-bebas text-7xl text-white">Films made to</h1>
+                        <h1 class="font-bebas text-7xl text-yellow">Perfection</h1>
+                        <p class="text-white font-montserrat max-w-xl mb-10">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut  elit tellus, 
+                            luctus nec ullamcorper mattis, pulvinar dapibus leo
+                        </p>
+                        <button class="font-bebas text-lg text-white  border-2 border-white py-3 px-7 hover:bg-yellow hover:border-yellow hover:text-gray transition-all">Discover More</button>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== Banner Section End ====== -->
+        </header>
+        <!-- ===== Header Section End ====== -->
+    
+        
+        <!-- ===== Main Section Start ====== -->
+        <main class="">
+            
+            <!-- ===== About Us Section Start ====== -->
+            <section class="my-40 p-5">
+                <div class="border-2 border-black w-full max-w-7xl mx-auto">
+                    <div class="md:flex md:p-9 p-5">
+                        <div class="w-full md:w-1/2 h-[500px] bg-[url('./images/camera-man.jpg')] bg-cover bg-center flex justify-center items-end mb-10">
+                            <!-- <img class="" src="images/camera-man.jpg" alt=""> -->
+                            <h3 class="bg-white text-3xl font-bebas w-fit text-center py-4 px-28 rounded-lg -mb-8 shadow-xl">23 Years of experience</h3>
+                            <!-- <h3 class="bg-white text-3xl font-bebas w-full mx-8 text-center py-4 px-28 rounded-lg -mb-8 shadow-xl">23 Years of experience</h3> -->
+                        </div>
+                        <div class="w-full md:w-1/2 p-5">
+                            <p class="font-bebas pb-2">About us</p>
+                            <h1 class="font-bebas text-7xl">FIlming Experience</h1>
+                            <h1 class="font-bebas text-7xl pb-2">Just Got better</h1>
+                            <p class="font-montserrat max-w-xl mb-10">Primis lobortis adipiscing imperdiet dis ultricies. Id commodo interdum fermentum pede dictumst ipsum. Erat sapien phasellus suspendisse natoque nulla leo ornare mi. Pretium rhoncus venenatis ante dignissim aliquet faucibus tempus etiam feugiat.</p>
+                            <button class="font-bebas text-lg border-2 py-3 px-7 hover:bg-black hover:border-black hover:text-white transition-all">Discover More</button>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-20 md:p-8 md:mt-10 p-5">
+                        <div class="border-t-8">
+                            <div class="bg-red-600 h-2 w-full mt-2"></div>
+                            <h1 class="font-bebas text-5xl pt-3">OUR VISIOn</h1>
+                            <p class="font-montserrat max-w-[345px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo</p>
+                        </div>
+                        <div class="border-t-8">
+                            <div class="bg-red-600 h-2 w-full mt-2"></div>
+                            <h1 class="font-bebas text-5xl pt-3">OUR Mission</h1>
+                            <p class="font-montserrat max-w-[345px]">Malesuada tempus et habitant nascetur porta nec. Fusce consequat risus per sollicitudin hendrerit suscipit convallis sociosqu.</p>
+                        </div>
+                        <div class="border-t-8">
+                            <div class="bg-red-600 h-2 w-full mt-2"></div>
+                            <h1 class="font-bebas text-5xl pt-3">OUR Motto</h1>
+                            <p class="font-montserrat max-w-[345px]">“We don’t make movies to make money, we make money to make more movies.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== About Us Section End ====== -->
+            
+            <!-- ===== Our Movies Section Start ====== -->
+            <section class="bg-gray py-14 px-5">
+                    <div class="w-full max-w-7xl mx-auto md:px-9 px-5 mb-7">
+                        <p class="font-bebas text-white">Our movies</p>
+                        <div class="md:flex justify-between items-center">
+                            <h1 class="font-bebas text-7xl text-white">Movie collection</h1>
+                            <button class="font-bebas text-lg text-white  border-2 border-white py-3 px-7 hover:bg-yellow hover:border-yellow hover:text-gray transition-all">Discover More</button>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-14 w-full max-w-7xl mx-auto p- md:px-9">
+                        <!-- <DIv class="border-2 border-white w-[220px] h-[310px] p-5">
+                            <div class="bg-[url('./images/tenet.jpg')] h-full w-full bg-cover"></div>
+                        </DIv> -->
+                        
+                        <DIv class="border-2 border-white h-[700px] md:h-[590px] lg:h-[400px] p-5">
+                            <!-- <div class="bg-[url('./images/tenet.jpg')] h-full w-full bg-cover bg-center"></div> -->
+                            <div class="group bg-[url('./images/tenet.jpg')] h-full w-full bg-cover bg-center flex justify-center items-center">
+                                <h1 class="font-bebas text-red-600 text-7xl hidden group-hover:block">Tenet</h1>
+                            </div>
+                        </DIv>
+                        <DIv class="border-2 border-white h-[700px] md:h-[590px] lg:h-[400px] p-5">
+                            <div class="bg-[url('./images/inception.jpg')] h-full w-full bg-cover bg-center"></div>
+                        </DIv>
+                        <DIv class="border-2 border-white h-[700px] md:h-[590px] lg:h-[400px] p-5">
+                            <div class="bg-[url('./images/interstellar.jpg')] h-full w-full bg-cover bg-center"></div>
+                        </DIv>
+                        <DIv class="border-2 border-white h-[700px] md:h-[590px] lg:h-[400px] p-5">
+                            <div class="bg-[url('./images/fractured.jpg')] h-full w-full bg-cover bg-center"></div>
+                        </DIv>
+                        
+                        <!-- <DIv class="border-2 border-white h-[420px] w-[300px] p-5">
+                            <div class="bg-[url('./images/tenet.jpg')] h-full w-full bg-cover bg-center"></div>
+                        </DIv>
+                        <DIv class="border-2 border-white h-[420px] w-[300px] p-5">
+                            <div class="bg-[url('./images/inception.jpg')] h-full w-full bg-cover bg-center"></div>
+                        </DIv>
+                        <DIv class="border-2 border-white h-[420px] w-[300px] p-5">
+                            <div class="bg-[url('./images/interstellar.jpg')] h-full w-full bg-cover bg-center"></div>
+                        </DIv>
+                        <DIv class="border-2 border-white h-[420px] w-[300px] p-5">
+                            <div class="bg-[url('./images/fractured.jpg')] h-full w-full bg-cover bg-center"></div>
+                        </DIv> -->
+                    </div>
+            </section>
+            <!-- ===== Our Movies Section End ====== -->
+
+            <!-- ===== Service Section Start ====== -->
+            <section>
+                <div class="w-full max-w-7xl mx-auto mt-40 mb-44">
+                    <div class="font-bebas text-center mb-20">
+                        <p class="">Service</p>
+                        <h1 class="text-7xl">What we offer</h1>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-14 px-5">
+                        <div class="border-2 border-black text-center">
+                            <div class="flex justify-center pt-5 pb-4">
+                                <div class="bg-[url('./images/icons/camera.png')] w-20 h-20 bg-cover bg-center">
+                                    <!-- <img src="./images/icons/camera.png" alt=""> -->
+                                </div>
+                            </div>
+                            <div class="px-2 pb-5 ">
+                                <p class="font-bebas text-xl pb-2">3D MOVIES</p>
+                                <p class="font-montserrat">Ex quam platea aliquet viverra si dictumst lobortis quis aliquam dis eget. </p>
+                            </div>
+                        </div>
+                        <div class="border-2 border-black text-center">
+                            <div class="flex justify-center pt-5 pb-4">
+                                <div class="bg-[url('./images/icons/3d-glasss.png')] w-20 h-20 bg-cover bg-center">
+                                    <!-- <img src="./images/icons/camera.png" alt=""> -->
+                                </div>
+                            </div>
+                            <div class="px-2 pb-5 ">
+                                <p class="font-bebas text-xl pb-2">Film maker</p>
+                                <p class="font-montserrat">Ex quam platea aliquet viverra si dictumst lobortis quis aliquam dis eget. </p>
+                            </div>
+                        </div>
+                        <div class="border-2 border-black text-center">
+                            <div class="flex justify-center pt-5 pb-4">
+                                <div class="bg-[url('./images/icons/director-chair.png')] w-20 h-20 bg-cover bg-center">
+                                    <!-- <img src="./images/icons/camera.png" alt=""> -->
+                                </div>
+                            </div>
+                            <div class="px-2 pb-5 ">
+                                <p class="font-bebas text-xl pb-2">Studio Production</p>
+                                <p class="font-montserrat">Ex quam platea aliquet viverra si dictumst lobortis quis aliquam dis eget. </p>
+                            </div>
+                        </div>
+                        <div class="border-2 border-black text-center">
+                            <div class="flex justify-center pt-5 pb-4">
+                                <div class="bg-[url('./images/icons/film.png')] w-20 h-20 bg-cover bg-center">
+                                    <!-- <img src="./images/icons/camera.png" alt=""> -->
+                                </div>
+                            </div>
+                            <div class="px-2 pb-5 ">
+                                <p class="font-bebas text-xl pb-2">Drama Movies</p>
+                                <p class="font-montserrat">Ex quam platea aliquet viverra si dictumst lobortis quis aliquam dis eget. </p>
+                            </div>
+                        </div>
+                        <div class="border-2 border-black text-center">
+                            <div class="flex justify-center pt-5 pb-4">
+                                <div class="bg-[url('./images/icons/theater.png')] w-20 h-20 bg-cover bg-center">
+                                    <!-- <img src="./images/icons/camera.png" alt=""> -->
+                                </div>
+                            </div>
+                            <div class="px-2 pb-5 ">
+                                <p class="font-bebas text-xl pb-2">Rolling Production</p>
+                                <p class="font-montserrat">Ex quam platea aliquet viverra si dictumst lobortis quis aliquam dis eget. </p>
+                            </div>
+                        </div>
+                        <div class="border-2 border-black text-center">
+                            <div class="flex justify-center pt-5 pb-4">
+                                <div class="bg-[url('./images/icons/rim.png')] w-20 h-20 bg-cover bg-center">
+                                    <!-- <img src="./images/icons/camera.png" alt=""> -->
+                                </div>
+                            </div>
+                            <div class="px-2 pb-5 ">
+                                <p class="font-bebas text-xl pb-2">Movie Production</p>
+                                <p class="font-montserrat">Ex quam platea aliquet viverra si dictumst lobortis quis aliquam dis eget. </p>
+                            </div>
+                        </div>
+                        <div class="border-2 border-black text-center">
+                            <div class="flex justify-center pt-5 pb-4">
+                                <div class="bg-[url('./images/icons/cut-board.png')] w-20 h-20 bg-cover bg-center">
+                                    <!-- <img src="./images/icons/camera.png" alt=""> -->
+                                </div>
+                            </div>
+                            <div class="px-2 pb-5 ">
+                                <p class="font-bebas text-xl pb-2">actor action</p>
+                                <p class="font-montserrat">Ex quam platea aliquet viverra si dictumst lobortis quis aliquam dis eget. </p>
+                            </div>
+                        </div>
+                        <div class="border-2 border-black text-center">
+                            <div class="flex justify-center pt-5 pb-4">
+                                <div class="bg-[url('./images/icons/count-down.png')] w-20 h-20 bg-cover bg-center">
+                                    <!-- <img src="./images/icons/camera.png" alt=""> -->
+                                </div>
+                            </div>
+                            <div class="px-2 pb-5 ">
+                                <p class="font-bebas text-xl pb-2">Movies director</p>
+                                <p class="font-montserrat">Ex quam platea aliquet viverra si dictumst lobortis quis aliquam dis eget. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== Service Section End ====== -->
+
+        </main>
+        <!-- ===== Main Section End ====== -->
+
+        <!-- ===== Footer Section Start ====== -->
+        <footer class="bg-[url('./images/footer-bg.jpg')] bg-cover bg-center">
+            <div class="text-white text-center pt-14">
+                <h1 class="font-bebas text-7xl">jhaka naka production</h1>
+                <p class="font-bebas text-2xl pb-5">next level experience</p>
+                <p class="font-montserrat pb-24">Feugiat nibh litora semper proin nullam facilisi <br> 
+                    volutpat ex ullamcorper.</p>
+                <p class="font-montserrat pt-2 pb-8">Copyright &copy; 2021 Jhaka Naka Production, All rights reserved. Present by Mir Hussain</p>
+            </div>
+        </footer>
+        <!-- ===== Footer Section End ====== -->
+        
+
+
+
+
+        <!-- ===== 
+            ===== External JavaScript =====
+            #1 - JavaScript can be placed in the <head>, or in the <body> section, or in both.
+            #2 - In HTML, JavaScript code is inserted between <script> and </script> tags.
+            #3 - You can place any number of scripts in an HTML document.
+            #4 - To use an external script, put the name of the script file in the src (source) attribute of a <script> tag:
+        ===== -->
+        <!-- ===== Bootstrap.js styles reference link =====  -->
+        <!-- <script src="styles/bootstrap-js/bootstrap.bundle.js"></script> -->
+
+    </body>
+</html>
